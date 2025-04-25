@@ -1,0 +1,84 @@
+/* 全局样式 */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 修改Element UI的一些默认样式 */
+.el-card {
+  border-radius: 4px;
+  border: none;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  
+  .el-card__header {
+    padding: 15px 20px;
+    border-bottom: 1px solid #ebeef5;
+    font-weight: bold;
+  }
+  
+  .el-card__body {
+    padding: 20px;
+  }
+}
+
+/* 动画 */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c4cc;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f6f6;
+}
+
+/* 表格相关 */
+.el-table {
+  th {
+    background-color: #f5f7fa !important;
+  }
+  
+  .el-table__row {
+    transition: background-color 0.3s;
+    
+    &:hover {
+      background-color: #f5f7fa !important;
+    }
+  }
+}
+
+/* 响应式适配 */
+@media screen and (max-width: 768px) {
+  .el-message {
+    min-width: 300px !important;
+  }
+  
+  .el-dialog {
+    width: 90% !important;
+  }
+  
+  .el-form-item__label {
+    float: none !important;
+    text-align: left !important;
+    margin-bottom: 8px;
+  }
+}
